@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patty Nguyen — Project Management</title>
+  <title>Patty Nguyen — Creative Operations & Project Management</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <style>
@@ -599,4 +599,15 @@
 
     function toggleProject(card) {
       const isActive = card.classList.contains('active');
-      document.querySelectorAll('.project-card').forEach(c => c.classList.remove('
+      document.querySelectorAll('.project-card').forEach(c => c.classList.remove('active'));
+      if (!isActive) card.classList.add('active');
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-msg').style.display = 'block';
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
